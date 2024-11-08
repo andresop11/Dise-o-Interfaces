@@ -1,0 +1,182 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#nav {
+  background-color: gainsboro;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  z-index: 1000;
+}
+
+#nav > ul {
+  list-style: none;
+  text-decoration: none;
+  width: 1090px;
+  margin-left: 30px;
+  padding-top: 10px;
+}
+
+#nav > ul > li {
+  float: left;
+  line-height: 40px;
+  position: relative;
+  font-size: 1.5em;
+  color: black;
+}
+
+#nav > ul > li > a {
+  text-decoration: none;
+  height: 50px;
+  color: black;
+  padding: 10px;
+}
+
+#nav > ul > li:first-child > a {
+  background-color: coral;
+  color: white;
+}
+
+/* BARRA DESPLEGABLE ASIR*/
+
+#nav > ul > li:hover:not(:first-child) > a {
+    background-color: blueviolet;
+}
+
+#nav > ul > li > ul{
+    display: none;
+    position: absolute;
+    width: 264px;
+    list-style: none;
+}
+
+
+
+#nav > ul > li:hover > ul{
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li{
+    background-color: chartreuse;
+    padding: 8px;
+}
+
+#nav > ul > li:hover > ul > li > a{
+    color: black;
+    text-decoration: none;
+}
+
+#nav > ul > li:hover > ul > li:hover{
+    background-color: blueviolet;
+}
+
+
+#nav > ul > li > ul > li > ul {
+    display: none;
+    position: absolute;
+    width: 264px;
+    list-style: none;
+    left: 100%; /* Mueve el submenú más hacia la derecha */
+    top: 0;
+    background-color: chartreuse;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul {
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li{
+    padding: 8px;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li:hover{
+    background-color: blueviolet;
+}
+
+#nav > ul > li > ul > li > ul > li > ul {
+    display: none;
+    position: absolute;
+    width: 264px;
+    list-style: none;
+    left: 100%; /* Mueve el submenú más hacia la derecha */
+    top: 0;
+    background-color: chartreuse;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li:hover > ul{
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li:hover > ul > li {
+    padding: 8px;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li:hover > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav > ul > li:hover > ul > li:hover > ul > li:hover > ul > li:hover{
+    background-color: blueviolet;
+}
+
+/* HEADER */
+
+.banner-contenedor{
+    margin-top:100px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: aqua;
+}
+
+.banner-contenedor img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+}
+
+.banner-texto h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.banner-texto p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+
+.boton{
+    background-color: #ff5c38;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer; 
+}
+
+    /* Efecto hover en el botón */
+.boton:hover {
+    background-color: #e04d2c;
+}
