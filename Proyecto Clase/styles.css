@@ -1,0 +1,647 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../assets/fonts/BebasNeue.otf);
+}
+
+@font-face {
+    font-family: 'websymbols';
+    src: url("../assets/fonts/websymbols-regular-webfont.eot");
+    src: url("../assets/fonts/websymbols-regular-webfont.ttf");
+    src: url("../assets/fonts/websymbols-regular-webfont.woff");
+}
+
+@font-face {
+    font-family: 'Trebuchet';
+    src: url(../assets/fonts/TrebuchetMS.ttf);
+}
+
+:root{
+    --color-primary:#37bcf9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'BebasNeue';
+}
+
+body {
+    background-image: url("../assets/img/pattern.png");
+}
+
+.header{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 25px;
+    font-family: 'BebasNeue';
+    display: flex;
+    height: 80px; 
+}
+
+.header_contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 80%;
+    line-height: 80px;
+    
+}
+
+.header_logo{
+    overflow: hidden;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 5px 35px;
+    gap: 15px;
+    margin-left: 50px;
+    
+}
+
+.logo_icon{
+    font-family: 'websymbols';
+    font-size: 2rem;
+    text-align: center;
+    animation: vueltas 2s infinite linear;
+}
+
+.header_nav ul{
+display: flex;
+list-style: none;
+font-size: 1.8em;
+width: 100%;
+margin-right: 50px;
+}
+
+.header_nav > ul > li{
+    margin-left: 50px;
+    cursor: pointer;
+}
+.header_nav ul > li{
+    transition: transform 0.5s ease-in-out;
+}
+.header_nav > ul > li:hover{
+    color: var(--color-primary);
+    transform: scale(1.2);
+
+}
+
+/*Estilos main*/
+.main{
+    width: 80%;
+    margin: 40px auto;
+}
+
+/*Estilos del banner*/
+.banner{
+    padding: 7px;
+    border: 1px solid lightgrey;
+    height: 15vh;
+}
+
+.banner_background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.banner_text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 2.5em; /*HAY QUE PONERLO MÁS GRANDE*/
+    text-shadow: 5px 5px 10px black;
+    animation: animate-text 20s linear;
+}
+
+
+/*Section target*/
+.target{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'BebasNeue';
+    text-align: center;
+    margin-bottom:60px 
+}
+
+.target::after {
+    content: "";
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #222;
+}
+
+.target_curso{
+     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 18%;
+    padding: 15px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 0px 5px #333;
+    overflow: hidden; 
+    
+}
+
+.target_curso:hover {
+    background-color: #222;
+    color: #0373bd;
+    transition: background .2s linear;
+    
+}
+
+.curso_icon{
+    font-family: 'websymbols';
+    font-size: 3rem;
+    margin-top: 15px;
+}
+
+.curso_title {
+    color: #1b558c;
+    font-size: 18px;
+    font-family: 'Trebuchet';
+}
+
+.curso_text {
+    color: #0373bd;
+    font-size: 15px;
+    font-family: 'Trebuchet';
+}
+
+.target_curso:hover .curso_icon, .target_curso:hover .curso_title {
+    animation: top-bottom .5s;
+}
+
+.target_curso:hover .curso_icon {
+    font-size: 4rem;
+}
+
+.target_curso:hover .curso_text {
+    animation: left-right .5s;
+}
+
+.target_curso:hover .curso_text, .target_curso:hover .curso_title {
+    color: white;
+}
+
+
+.blog {
+    display: flex;
+    gap: 5vh;
+}
+
+.blog__articulos {
+    flex-grow: 2;
+    padding: 20px;
+}
+
+/* Estilos articulos */
+.articulos__title {
+    background-image: url("../assets/img/pxgray.png");
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    padding: 20px 0;
+    box-shadow: 5px 5px 0 black;
+}
+
+.articulos__entrada {
+    margin: 5vh 0;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px lightgray;
+    position: relative;
+}
+
+
+.articulos__entrada:last-of-type::after {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-bottom: 3px solid lightgray;
+}
+
+.entrada__title {
+    color: #1b558c;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.entrada__text {
+    padding: 20px 0;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet';
+}
+
+.entrada__inf {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 15px;
+    background-color: #222;
+    width: fit-content;
+    padding: 15px 20px;
+    font-size: .8rem;
+    color: white;
+}
+
+.entrada__inf p {
+    font-family: 'Trebuchet';
+}
+
+/* Estilos boton blog */
+.articulos__btn {
+    width: 100%;
+    height: max-content;
+    box-shadow: 0 0 5px lightgray;
+    border: 1px solid gray;
+    background-color: white;
+    font-size: 3rem;
+    padding: 30px;
+    color: #1b558c;
+    transition: all .5s linear;
+}
+
+.articulos__btn:hover {
+    border-radius: 150px;
+    background-color: #222;
+    animation: botones 20s linear infinite;
+    transition: all .5s linear;
+    color: white;
+}
+
+
+
+
+.blog__lateral {
+    flex-grow: 1;
+    padding: 20px;
+    width: 45rem;
+}
+
+.lateral__title {
+    margin-bottom: 20px;
+    width: 100%;
+    background-image: url("../assets/img/pxgray.png");
+    background-size: cover;
+    padding: 10px;
+    box-shadow: 5px 5px 0 black;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+/* Estilos barra de busqueda */
+.lateral__busqueda {
+    margin-bottom: 40px;
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.busqueda__input {
+    line-height: 2.5rem;
+    border: none;
+    box-shadow: 0 0 5px gray;
+}
+
+.busqueda__input:first-child {
+    padding-left: 10px;
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+
+.busqueda__input:last-child {
+    width: 20%;
+    font-size: 1.2rem;
+    font-family: 'websymbols';
+    border-radius: 0 5px 5px 0;
+}
+
+/* Estilos del login lateral */
+.lateral__login {
+    width: 90%;
+    background-color: white;
+    padding: 30px 15px;
+    box-shadow: 0 3px 5px gray;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login__input {
+    position: relative;
+    line-height: 2rem;
+    border: none;
+    box-shadow: 0 0 5px gray inset;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+
+
+.login__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.login__btn input {
+    border: 1px solid gray;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #36aeda;
+    color: white;
+    font-family: 'Trebuchet';
+    transition: box-shadow .1s linear;
+}
+
+.login__btn input:hover {
+    box-shadow: 0 0 5px #0373bd;
+    transition: box-shadow .1s linear;
+}
+
+.login__links{
+    display: flex;
+    flex-direction: column;
+}
+
+.login__links a {
+    font-family: 'Trebuchet';
+    color: black;
+    text-decoration: none;
+}
+
+.login__links a:hover {
+    color: #0373bd;
+    text-decoration: underline;
+}
+
+/* Estilos redes sociales lateral */
+.lateral__redes {
+    width: 90%;
+    margin: auto;
+    padding: 10px 10px 60px 10px;
+    background-color: white;
+    box-shadow: 0 3px 5px gray;
+    margin-bottom: 40px;
+}
+
+.lateral__redes div {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    overflow: hidden;
+    height: 2rem;
+}
+
+.lateral__redes p {
+    cursor: pointer;
+    font-family: 'WebSymbols';
+    font-size: 1.5rem;
+}
+
+.lateral__redes a {
+    font-weight: normal;
+    padding: 0 5px;
+    transform: translate(-180%);
+    transition: transform .4s linear;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    box-shadow: 0 0 5px gray;
+    border: 3px solid white;
+    background-color: lightblue;
+    transition: all .4s linear;
+}
+
+.lateral__redes div:hover a {
+    transform: translate(0);
+    transition: all .4s linear;
+}
+
+/* Estilos patrocinadores lateral */
+.lateral__patrocinadores {
+    margin: auto;
+    width: 90%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0 3px 5px gray;
+    position: relative;
+}
+
+.lateral__patrocinadores::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-bottom: 3px solid lightgray;
+}
+
+
+.footer {
+    background-color: #222;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 30px;
+}
+
+.footer > section {
+    width: 20%;
+}
+
+.footer__title {
+    text-align: center;
+    font-size: 2rem;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Estilos menu pie */
+.footer__menu ul {
+    list-style: none;
+    color: white;
+}
+
+.footer__menu ul li {
+    font-size: 2.5rem;
+}
+
+
+.footer__menu ul li a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #0373bd;
+    display: inline-block;
+    transition: transform 0.3s;
+    margin-left: 10px;
+}
+
+.footer__menu ul li div {
+    font-family: 'Trebuchet';
+}
+
+.footer__menu ul li div::after {
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.footer__menu ul li:hover div::after {
+    width: 100%;
+}
+
+.footer__menu ul li:hover div a {
+    color: white;
+    transform: translateX(20px);
+}
+
+/* Estilos mapa pie */
+.footer__map iframe {
+    border-radius: 5px;
+}
+
+/* Estilos creditos pie */
+.creditos__tecnologias {
+    width: 20rem;
+    margin: 15px auto;
+}
+
+.creditos__aplicaciones img {
+    width: 3rem;
+    margin: 15px auto;
+}
+
+.creditos__autor {
+    color: white;
+}
+
+
+
+
+@keyframes vueltas {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes top-bottom {
+    from {
+        transform: translateY(-300%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes left-right {
+    from {
+        transform: translateX(-200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-left {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes botones {
+    0% {
+        border: 10px solid blue;
+    }
+
+    25% {
+        border: 10px solid greenyellow;
+    }
+
+    50% {
+        border: 10px solid red;
+    }
+
+    75% {
+        border: 10px solid yellow;
+    }
+
+    100% {
+        border: 10px solid blue;
+    }
+}
+
+@keyframes animate-text {
+    0% {
+        transform: scale(2) translate(-200%);
+        opacity: .7;
+    }
+
+    35% {
+        transform: scale(2) translate(200%);
+        opacity: .7
+    }
+
+    55% {
+        transform: scale(2) translate(-200%);
+        opacity: .1;
+    }
+
+    65% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+
